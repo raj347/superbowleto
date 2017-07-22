@@ -24,4 +24,5 @@ export const getCredentials = memoize((key: string): Promise<string> => {
   return credstash.getSecret({
     name: credstashKey
   })
+    .catch(err => console.log(err))
 })
